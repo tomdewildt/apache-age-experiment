@@ -1,3 +1,6 @@
+[tools]
+node = "24.13.1"
+
 [tasks.init]
 description = "Initialize the environment"
 run = "npm install"
