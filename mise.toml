@@ -1,0 +1,47 @@
+[tasks.init]
+description = "Initialize the environment"
+run = "npm install"
+
+[tasks.run]
+description = "Run the application"
+run = "npx tsx src/main.ts"
+
+[tasks.build]
+description = "Build the application"
+run = "npx tsc"
+
+[tasks."db:start"]
+description = "Start the database"
+run = "docker compose up -d"
+
+[tasks."db:stop"]
+description = "Stop the database"
+run = "docker compose down"
+
+[tasks."db:generate"]
+description = "Generate the database schema"
+run = "npx drizzle-kit generate"
+
+[tasks."db:migrate"]
+description = "Run the database migrations"
+run = "npx drizzle-kit migrate"
+
+[tasks."db:push"]
+description = "Push the database schema"
+run = "npx drizzle-kit push"
+
+[tasks."db:studio"]
+description = "Run the database studio"
+run = "npx drizzle-kit studio"
+
+[tasks.lint]
+description = "Run lint check"
+run = "npx eslint src/"
+
+[tasks.format]
+description = "Run format check"
+run = "npx prettier --check src/"
+
+[tasks.types]
+description = "Run type check"
+run = "npx tsc --noEmit"
